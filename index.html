@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Hamburgueria do Dev</title>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">🍔 DevBurger</a>
+            <nav>
+                <a href="#home">Início</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button id="cart-btn" class="btn btn-cart-header">
+                    <i class="fa fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+                </button>
+                <a href="#cardapio" class="btn hidden-mobile">Peça Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-wrapper">
+        <article class="hero container">
+            <div class="hero-text">
+                <h1>O Melhor Hamburguer da Cidade</h1>
+                <p>Ingredientes frescos, receitas especiais e entrega rápida. Peça agora e receba em até 40 minutos!</p>
+                <nav class="hero-buttons">
+                    <a href="#cardapio" class="btn">Ver cardápio</a>
+                    <a href="https://wa.me/5511989985090" class="btn btn-outline">📲 WhatsApp</a>
+                </nav>
+                <ul class="hero-stats">
+                    <li>
+                        <strong>+500</strong>
+                        <span>Clientes felizes</span>
+                    </li>
+                    <li>
+                        <strong>4.9</strong>
+                        <span>Avaliação ⭐</span>
+                    </li>
+                    <li>
+                        <strong>40min</strong>
+                        <span>Entrega rápida</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hero-image">
+                <img alt="hamburger gigante"
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=999&auto=format&fit=crop">
+            </div>
+        </article>
+    </section>
+
+    <section id="cardapio" class="cardapio container">
+        <h2>Nosso Cardápio</h2>
+        <p>Escolha seu favorito e clique para adicionar ao carrinho</p>
+
+        <ul class="menu-grid">
+            <li>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop" alt="Burger Clássico">
+                    <span class="badge">Mais Vendido</span>
+                </div>
+                <div class="prod-info">
+                    <h3>Burger Clássico</h3>
+                    <p>Pão brioche, 180g de carne, queijo cheddar, alface, tomate e molho especial</p>
+                    <div class="price-row">
+                        <strong>R$ 28,90</strong>
+                        <button class="btn add-to-cart-btn" data-name="Burger Clássico" data-price="28.90">
+                            <i class="fa fa-cart-plus"></i> Pedir
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop" alt="Burger Bacon">
+                </div>
+                <div class="prod-info">
+                    <h3>Burger Bacon</h3>
+                    <p>Pão brioche, 180g de carne, bacon crocante, queijo, cebola caramelizada</p>
+                    <div class="price-row">
+                        <strong>R$ 34,90</strong>
+                        <button class="btn add-to-cart-btn" data-name="Burger Bacon" data-price="34.90">
+                            <i class="fa fa-cart-plus"></i> Pedir
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=300&fit=crop" alt="Burger Duplo">
+                    <span class="badge hot">Novidade</span>
+                </div>
+                <div class="prod-info">
+                    <h3>Burger Duplo</h3>
+                    <p>Pão brioche, 2x 180g de carne, dobro de queijo, bacon e molho barbecue</p>
+                    <div class="price-row">
+                        <strong>R$ 42,90</strong>
+                        <button class="btn add-to-cart-btn" data-name="Burger Duplo" data-price="42.90">
+                            <i class="fa fa-cart-plus"></i> Pedir
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=300&fit=crop" alt="Burger Veggie">
+                </div>
+                <div class="prod-info">
+                    <h3>Burger Veggie</h3>
+                    <p>Pão integral, hambúrguer de grão de bico, queijo, rúcula e maionese verde</p>
+                    <div class="price-row">
+                        <strong>R$ 32,90</strong>
+                        <button class="btn add-to-cart-btn" data-name="Burger Veggie" data-price="32.90">
+                            <i class="fa fa-cart-plus"></i> Pedir
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400&h=300&fit=crop" alt="Batata Frita">
+                </div>
+                <div class="prod-info">
+                    <h3>Batata Frita</h3>
+                    <p>Porção generosa de batatas fritas crocantes com sal e temperos especiais</p>
+                    <div class="price-row">
+                        <strong>R$ 18,90</strong>
+                        <button class="btn add-to-cart-btn" data-name="Batata Frita" data-price="18.90">
+                            <i class="fa fa-cart-plus"></i> Pedir
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400&h=300&fit=crop" alt="Milk Shake">
+                </div>
+                <div class="prod-info">
+                    <h3>Milk Shake</h3>
+                    <p>Milk shake cremoso nos sabores chocolate, morango ou ovomaltine (400ml)</p>
+                    <div class="price-row">
+                        <strong>R$ 16,90</strong>
+                        <button class="btn add-to-cart-btn" data-name="Milk Shake" data-price="16.90">
+                            <i class="fa fa-cart-plus"></i> Pedir
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="container sobre-content">
+            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&h=500&fit=crop" alt="Nossa cozinha">
+            <article>
+                <h2>Nossa História</h2>
+                <p>Desde 2020, a DevBurger nasceu da paixão por hambúrgueres artesanais. Nosso segredo? Ingredientes selecionados e muito amor em cada preparo.</p>
+                <ul>
+                    <li>🥩 <strong>Carne Fresca</strong> - 100% bovina selecionada</li>
+                    <li>🚀 <strong>Entrega Rápida</strong> - Máximo 40 minutos</li>
+                    <li>💳 <strong>Pagamento Fácil</strong> - PIX, cartão ou dinheiro</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Bateu a Fome?</h2>
+            <p>Faça seu pedido agora e receba em casa!</p>
+            <a href="https://wa.me/5511999999999" class="btn btn-light">📲 Pedir pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container footer-grid">
+            <section>
+                <h3>🍔 DevBurger</h3>
+                <p>O melhor hambúrguer artesanal da cidade.</p>
+            </section>
+            <section>
+                <h4>Horário</h4>
+                <p>Terça a Domingo<br>18h às 23h</p>
+            </section>
+            <section>
+                <h4>Contato</h4>
+                <p>📱 (11) 99999-9999<br>📍 Rua dos Hambúrgueres, 123</p>
+            </section>
+            <section>
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </section>
+        </div>
+        <div class="copy">
+            <p>© 2025 - DevBurger - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="cart-modal-container">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2 class="cart-title">Meu Carrinho</h2>
+                <button id="close-modal-btn"><i class="fa fa-times"></i></button>
+            </div>
+            
+            <div id="cart-items" class="cart-items"></div>
+            
+            <p class="cart-total">Total: <span id="cart-total">0.00</span></p>
+
+            <div class="payment-container">
+                <label for="payment-method">Forma de Pagamento (Obrigatório):</label>
+                <select id="payment-method" class="address-input">
+                    <option value="">-- Selecione --</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="pix">PIX</option>
+                    <option value="debito">Cartão de Débito</option>
+                    <option value="credito">Cartão de Crédito</option>
+                </select>
+                <p id="payment-warn" class="address-warn hidden">Selecione a forma de pagamento.</p> 
+            </div>
+
+            <div id="troco-field" class="troco-container hidden">
+                <label for="troco-value">Precisa de troco para quanto?</label>
+                <input type="number" placeholder="Ex: 50.00" id="troco-value" class="address-input"/>
+            </div>
+
+            <div class="address-container">
+                <label>Endereço de Entrega (Obrigatório):</label>
+                <input type="text" placeholder="Rua, número e bairro..." id="address" class="address-input"/>
+                <p id="address-warn" class="address-warn hidden">Digite seu endereço completo!</p> 
+            </div>
+
+            <div class="cart-buttons">
+                <button id="checkout-btn" class="btn checkout-btn">Finalizar Pedido pelo WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>
