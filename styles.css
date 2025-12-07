@@ -1,4 +1,4 @@
-/* --- ARQUIVO styles.css COMPLETO E FINAL --- */
+/* --- ARQUIVO styles.css COMPLETO E FINAL (AÇAÍ THEME) --- */
 
 * {
     margin: 0;
@@ -7,8 +7,11 @@
 }
 
 :root {
-    --primary: #ff6b35;
-    --primary-hover: #e55a2b;
+    /* CORES NOVAS PARA AÇAÍ */
+    --primary: #6A0DAD; /* Roxo Profundo do Açaí */
+    --primary-hover: #9932CC; /* Roxo para hover */
+    --secondary-highlight: #FF69B4; /* Destaque (Pink/Magenta) */
+
     --dark: #1a1a1a;
     --gray: #6c757d;
     --light: #f8f9fa;
@@ -37,7 +40,7 @@ html { scroll-behavior: smooth; }
 
 /* Botões Gerais */
 .btn {
-    background: var(--primary);
+    background: var(--primary); /* ROXO AÇAÍ */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -57,24 +60,24 @@ html { scroll-behavior: smooth; }
 }
 
 .btn:hover {
-    background-color: var(--primary-hover);
+    background-color: var(--primary-hover); /* ROXO MAIS CLARO */
     transform: translateY(-2px);
 }
 
 .btn-outline {
     background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid var(--primary); /* ROXO AÇAÍ */
+    color: var(--primary); /* ROXO AÇAÍ */
 }
 
 .btn-outline:hover {
-    background-color: var(--primary);
+    background-color: var(--primary); /* ROXO AÇAÍ */
     color: #fff;
 }
 
 .btn-light {
     background-color: #fff;
-    color: var(--primary);
+    color: var(--primary); /* ROXO AÇAÍ */
 }
 
 /* HEADER */
@@ -103,7 +106,7 @@ header {
 
 header nav { display: flex; gap: 25px; }
 header nav a { font-weight: 500; font-size: 16px; color: var(--dark); transition: 0.2s;}
-header nav a:hover { color: var(--primary); }
+header nav a:hover { color: var(--primary); } /* ROXO AÇAÍ */
 
 /* NOVO: Ações Agrupadas no Header */
 .header-actions {
@@ -132,7 +135,8 @@ header nav a:hover { color: var(--primary); }
 
 /* HERO SECTION */
 .hero-wrapper {
-    background: linear-gradient(135deg, #fff5f0, #fff);
+    /* COR DE FUNDO AJUSTADA PARA FICAR CLARO E COM UM TOQUE DE ROXO */
+    background: linear-gradient(135deg, #f0f0ff, #fff); 
     padding-top: 100px;
     min-height: 90vh;
     display: flex;
@@ -162,13 +166,14 @@ header nav a:hover { color: var(--primary); }
 
 .hero img {
     border-radius: var(--radius);
-    box-shadow: 0 20px 60px rgba(255,107,53,0.2);
+    /* Sombra do Açaí theme */
+    box-shadow: 0 20px 60px rgba(106, 13, 173, 0.2); 
 }
 
 .hero-buttons { display: flex; gap: 15px; margin-bottom: 40px; }
 .hero-stats { display: flex; gap: 40px; }
 .hero-stats li { display: flex; flex-direction: column; }
-.hero-stats strong { font-size: 28px; color: var(--primary); }
+.hero-stats strong { color: var(--primary); font-size: 28px; } /* ROXO AÇAÍ */
 
 /* CARDÁPIO */
 .cardapio { padding: 80px 20px; text-align: center; }
@@ -202,14 +207,14 @@ header nav a:hover { color: var(--primary); }
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: var(--primary);
+    background-color: var(--primary); /* ROXO AÇAÍ */
     color: #fff;
     padding: 4px 12px;
     border-radius: 4px;
     font-size: 12px;
     font-weight: 700;
 }
-.badge.hot { background-color: #e74c3c; }
+.badge.hot { background-color: var(--secondary-highlight); } /* PINK/MAGENTA */
 
 .prod-info { padding: 20px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
 .prod-info h3 { font-size: 20px; margin-bottom: 8px; color: var(--dark); }
@@ -237,7 +242,8 @@ header nav a:hover { color: var(--primary); }
 .cta {
     padding: 80px 5%;
     text-align: center;
-    background: linear-gradient(135deg,var(--primary), #e55a2b);
+    /* Gradiente com a cor primária do Açaí */
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover)); 
 }
 
 .cta h2 {
@@ -260,7 +266,8 @@ footer { background: var(--dark); color: #fff; padding: 60px 0 20px; }
     gap: 40px;
     margin-bottom: 40px;
 }
-.footer-grid h3, .footer-grid h4 { margin-bottom: 15px; color: var(--primary); }
+/* Cores do footer ajustadas para o roxo */
+.footer-grid h3, .footer-grid h4 { margin-bottom: 15px; color: var(--secondary-highlight); } 
 .social-links { display: flex; gap: 15px; }
 .copy { text-align: center; border-top: 1px solid #333; padding-top: 20px; font-size: 14px; color: #888; }
 
@@ -341,7 +348,8 @@ footer { background: var(--dark); color: #fff; padding: 60px 0 20px; }
 .address-input.border-red { border-color: red !important; }
 .address-warn { color: red; font-size: 12px; margin-bottom: 10px; display: none; }
 
-.checkout-btn { width: 100%; background-color: #2ecc71; margin-top: 10px; }
+/* Mantido o verde para o botão de checkout (Finalizar Pedido) para dar ênfase (sucesso/finalização) */
+.checkout-btn { width: 100%; background-color: #2ecc71; margin-top: 10px; } 
 
 /* Utilidade para esconder elementos */
 .hidden {
