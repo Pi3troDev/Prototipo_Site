@@ -83,7 +83,6 @@ function abrirProduto(index) {
           <div class="group-header">
             <h4>${group.title}</h4>
             ${group.required ? `<span class="required-tag">Obrigatório</span>` : ""}
-            ${group.max && group.type === 'counter' ? `<small>(Limite: ${group.max})</small>` : ""}
           </div>
       `;
 
@@ -136,8 +135,11 @@ function abrirProduto(index) {
 window.changeOptionQty = (gIndex, oIndex, delta, max) => {
   const key = `${gIndex}-${oIndex}`;
   const currentQty = optionQuantities[key] || 0;
-  
-  // Calcula o total apenas deste grupo específico
+  if (delta > 0 && currentQty >= 1) {
+    mostrarAviso("Você só pode escolher cada item uma única vez.");
+    return;
+  }
+
   const groupTotal = Object.keys(optionQuantities)
     .filter(k => k.startsWith(`${gIndex}-`))
     .reduce((acc, k) => acc + optionQuantities[k], 0);

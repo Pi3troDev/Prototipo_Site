@@ -385,8 +385,21 @@ header nav a:hover { color: var(--primary); } /* ROXO AÇAÍ */
     border-radius: 20px 20px 0 0;
     display: flex;
     flex-direction: column;
-    max-height: 92vh;
-    overflow: hidden;
+    max-height: 95vh; /* Aumentei um pouco para aproveitar mais a tela */
+    overflow-y: auto;          /* Ativa o scroll vertical no modal inteiro */
+    overflow-x: hidden;        /* Evita que balance para os lados */
+    -webkit-overflow-scrolling: touch; /* Deixa o scroll "macio" no iPhone SE */
+}
+
+.cart-header, 
+.cart-items, 
+#modal-content,
+.cart-total, 
+.input-group, 
+.payment-container, 
+.address-grid, 
+.checkout-btn {
+    flex-shrink: 0; /* IMPEDE o achatamento de qualquer item */
 }
 
 .cart-modal input, .cart-modal select {
@@ -441,8 +454,8 @@ header nav a:hover { color: var(--primary); } /* ROXO AÇAÍ */
 
 /* CONTEÚDO DOS MODAIS */
 #modal-content, .cart-items {
-    flex: 1;
-    overflow-y: auto;
+    flex: none; 
+    overflow-y: visible; 
     padding: 20px 25px;
 }
 
@@ -520,7 +533,7 @@ header nav a:hover { color: var(--primary); } /* ROXO AÇAÍ */
 }
 
 /* CAMPOS DE INPUT E BOTÕES */
-.input-group, .payment-container, .address-input-container {
+.input-group, .payment-container, .address-input-container, #troco-field {
     padding: 0 25px;
     margin-top: 15px;
 }
@@ -531,6 +544,9 @@ header nav a:hover { color: var(--primary); } /* ROXO AÇAÍ */
     font-weight: 800;
     text-align: right;
     color: var(--dark);
+    border-top: 1px dashed #eee; /* Uma linha serrilhada antes do total fica bem estilo "cupom" */
+    padding-top: 20px;
+    margin-top: 10px;
 }
 
 .checkout-btn {
@@ -671,4 +687,16 @@ footer { background: var(--dark); color: #fff; padding: 60px 0 20px; margin-top:
 
     /* Footer Mobile */
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+}
+@media (max-width: 380px) {
+    .cart-header { padding: 15px; }
+    .cart-total { padding: 10px 20px; font-size: 18px; }
+    .checkout-btn { margin: 10px 20px 25px; padding: 14px; }
+    
+    /* Faz o endereço ficar um embaixo do outro para não apertar */
+    .address-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
 }
