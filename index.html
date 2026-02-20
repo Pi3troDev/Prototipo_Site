@@ -7,7 +7,10 @@
 
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Toastify -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -15,9 +18,12 @@
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
         <div class="container header-content">
             <a href="#" class="logo">Açai do Dev</a>
+
             <nav>
                 <a href="#home">Início</a>
                 <a href="#cardapio">Cardápio</a>
@@ -27,257 +33,200 @@
 
             <div class="header-actions">
                 <button id="cart-btn" class="btn btn-cart-header">
-                    <i class="fa fa-shopping-cart"></i> (<span id="cart-count">0</span>)
+                    <i class="fa fa-shopping-cart"></i>
+                    (<span id="cart-count">0</span>)
                 </button>
                 <a href="#cardapio" class="btn hidden-mobile">Peça Agora</a>
             </div>
         </div>
     </header>
 
+    <!-- HERO -->
     <section id="home" class="hero-wrapper">
         <article class="hero container">
+
             <div class="hero-text">
-                <h1>O Melhor Açai da Cidade</h1>
-                <p>Ingredientes frescos, receitas especiais e entrega rápida. Peça agora e receba em até 30 minutos!</p>
+                <h1>O Melhor Açaí da Cidade 💜</h1>
+                <p>Ingredientes frescos, receitas especiais e entrega rápida.</p>
+
                 <nav class="hero-buttons">
-                    <a href="#cardapio" class="btn">Ver cardápio</a>
-                    <a href="https://wa.me/5511989985090" class="btn btn-outline">📲 WhatsApp</a>
+                    <a href="#cardapio" class="btn">Ver Cardápio</a>
+                    <a href="https://wa.me/5511999999999" class="btn btn-outline">📲 WhatsApp</a>
                 </nav>
+
                 <ul class="hero-stats">
-                    <li>
-                        <strong>+500</strong>
-                        <span>Clientes felizes</span>
-                    </li>
-                    <li>
-                        <strong>4.9</strong>
-                        <span>Avaliação ⭐</span>
-                    </li>
-                    <li>
-                        <strong>30min</strong>
-                        <span>Entrega rápida</span>
-                    </li>
+                    <li><strong>+500</strong><span>Clientes felizes</span></li>
+                    <li><strong>4.9</strong><span>Avaliação ⭐</span></li>
+                    <li><strong>30min</strong><span>Entrega média</span></li>
                 </ul>
             </div>
 
             <div class="hero-image">
-                <img alt="hamburger gigante"
-                    src="https://www.assai.com.br/sites/default/files/shutterstock_2076982999.jpg">
+                <img src="https://alphagel.com.br/wp-content/uploads/2021/05/post_thumbnail-2a4cc713df2edd3ee1171e689b58dae3.jpeg"
+                    alt="Açaí">
             </div>
+
         </article>
     </section>
 
+    <!-- CARDÁPIO -->
     <section id="cardapio" class="cardapio container">
         <h2>Nosso Cardápio</h2>
-        <p>Escolha seu favorito e clique para adicionar ao carrinho</p>
+        <p>Clique no produto para personalizar</p>
 
-        <ul class="menu-grid">
-            <li>
-                <div class="img-container">
-                    <img src="https://www.designi.com.br/images/preview/10068838.jpg" alt="Açai Supremo">
-                    <span class="badge">Mais Vendido</span>
-                </div>
-                <div class="prod-info">
-                    <h3>Açai Supremo</h3>
-                    <p>Açai cremoso com Morango, Chocolate e Banana</p>
-                    <div class="price-row">
-                        <strong>R$ 20,90</strong>
-                        <button class="btn add-to-cart-btn" data-name="Açai Supremo" data-price="20.90">
-                            <i class="fa fa-cart-plus"></i> Pedir
-                        </button>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="img-container">
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.E1xYlpOW7cBOszpr3oIX7wHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
-                        alt="Açai Tentação">
-                </div>
-                <div class="prod-info">
-                    <h3>Açai Tentação</h3>
-                    <p>Açai Irresistivel com frutas frescas e leite condensado</p>
-                    <div class="price-row">
-                        <strong>R$ 17,90</strong>
-                        <button class="btn add-to-cart-btn" data-name="Açai Tentação" data-price="17.90">
-                            <i class="fa fa-cart-plus"></i> Pedir
-                        </button>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="img-container">
-                    <img src="https://images.slurrp.com/prodrich_article/i4g2rzvlgb.webp?impolicy=slurrp-20210601&width=880&height=500"
-                        alt="Sorvete artesanal">
-                    <span class="badge hot">Novidade</span>
-                </div>
-                <div class="prod-info">
-                    <h3>Sorvete Artesanal</h3>
-                    <p>4 bolas do nosso delicioso sorvete com sabores variados</p>
-                    <div class="price-row">
-                        <strong>R$ 14,90</strong>
-                        <button class="btn add-to-cart-btn" data-name="Burger Duplo" data-price="14.90">
-                            <i class="fa fa-cart-plus"></i> Pedir
-                        </button>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="img-container">
-                    <img src="https://images.tcdn.com.br/img/img_prod/858764/agua_crystal_500ml_c_12_125_1_a26927dc99c2653019b71f1ee44e98be.jpg"
-                        alt="Água Mineral">
-                </div>
-                <div class="prod-info">
-                    <h3>Água Mineral</h3>
-                    <p>Água mineral sem gás leve e refrescante</p>
-                    <div class="price-row">
-                        <strong>R$ 5,90</strong>
-                        <button class="btn add-to-cart-btn" data-name="Burger Veggie" data-price="5.90">
-                            <i class="fa fa-cart-plus"></i> Pedir
-                        </button>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="img-container">
-                    <img src="https://th.bing.com/th/id/R.027278ae836ceff30023771a6eb48db8?rik=2AdZqinvcO6m2g&pid=ImgRaw&r=0"
-                        alt="Sorvete Tablito">
-                </div>
-                <div class="prod-info">
-                    <h3>Sorvete Tablito</h3>
-                    <p>Sorvete de Palito Delicioso</p>
-                    <div class="price-row">
-                        <strong>R$ 8,90</strong>
-                        <button class="btn add-to-cart-btn" data-name="Batata Frita" data-price="8.90">
-                            <i class="fa fa-cart-plus"></i> Pedir
-                        </button>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="img-container">
-                    <img src="https://olhaquereceita.com.br/wp-content/uploads/2021/01/milk-shake-ovomaltine-1024x630.jpg"
-                        alt="Milk Shake">
-                </div>
-                <div class="prod-info">
-                    <h3>Milk Shake</h3>
-                    <p>Milk shake cremoso nos sabores chocolate, morango ou ovomaltine (400ml)</p>
-                    <div class="price-row">
-                        <strong>R$ 16,90</strong>
-                        <button class="btn add-to-cart-btn" data-name="Milk Shake" data-price="16.90">
-                            <i class="fa fa-cart-plus"></i> Pedir
-                        </button>
-                    </div>
-                </div>
-            </li>
+        <ul id="menu-grid" class="menu-grid">
+            <!-- Produtos carregados via JS -->
         </ul>
     </section>
 
+    <!-- SOBRE -->
     <section id="sobre" class="sobre">
         <div class="container sobre-content">
-            <img src="nossahistoria.png" alt="Nossa História - Açaí de Qualidade">
+
+            <img src="nossahistoria.png" alt="Nossa História">
+
             <article>
                 <h2>Nossa História</h2>
                 <p>
-                    Desde 2020, a **Açai do Dev** nasceu da paixão por Açaís de Qualidade, feitos com o verdadeiro sabor
-                    do Pará. Nosso segredo?
-                    Fruta selecionada, zero xarope de guaraná e muito amor em cada preparo. Uma tigela de energia e
-                    sabor para você!
+                    Desde 2020, a Açai do Dev nasceu da paixão pelo verdadeiro
+                    açaí do Pará. Polpa selecionada, zero xarope artificial e muito
+                    cuidado em cada preparo.
                 </p>
+
                 <ul>
-                    <li>💜 <strong>Açaí Puro</strong> - Feito com a polpa de açaí de alta qualidade, sem xarope
-                        artificial.</li>
-                    <li>🥥 <strong>Ingredientes Frescos</strong> - Frutas e acompanhamentos selecionados diariamente.
-                    </li>
-                    <li>🚀 <strong>Entrega Rápida</strong> - Leve o seu superfood favorito direto para sua casa.</li>
-                    <li>💳 <strong>Pagamento Fácil</strong> - PIX, cartão ou dinheiro.</li>
+                    <li>💜 Açaí puro</li>
+                    <li>🥥 Ingredientes frescos</li>
+                    <li>🚀 Entrega rápida</li>
+                    <li>💳 Pagamento fácil</li>
                 </ul>
             </article>
+
         </div>
     </section>
 
+    <!-- CTA -->
     <section id="cta" class="cta">
-    <div class="container">
-        <h2>Tá na hora de um Açaí? 💜</h2>
-        <p>Peça o seu agora e receba em casa a energia e o sabor que você merece!</p>
-        <a href="https://wa.me/5511999999999" class="btn btn-light">📲 Pedir Açaí pelo WhatsApp</a>
-    </div>
-</section>
+        <div class="container">
+            <h2>Tá na hora de um Açaí? 💜</h2>
+            <a href="https://wa.me/5511989985090" class="btn btn-light">
+                📲 Pedir pelo WhatsApp
+            </a>
+        </div>
+    </section>
 
----
+    <!-- FOOTER -->
+    <footer id="contato">
+        <div class="container footer-grid">
 
-<footer id="contato">
-    <div class="container footer-grid">
-        <section>
-            <h3>🍧 Açai do Dev</h3>
-            <p>O melhor açaí cremoso e puro da cidade.</p>
-        </section>
-        <section>
-            <h4>Horário de Funcionamento</h4>
-            <p>Terça a Domingo<br>14h às 22h</p>
-        </section>
-        <section>
-            <h4>Contato</h4>
-            <p>📱 (11) 99999-9999<br>📍 Rua do Açaí, 456</p>
-        </section>
-        <section>
-            <h4>Redes Sociais</h4>
-            <div class="social-links">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-            </div>
-        </section>
-    </div>
-    <div class="copy">
-        <p>© 2025 - Açai do Dev - Todos os direitos reservados</p>
-    </div>
-</footer>
+            <section>
+                <h3>🍧 Açai do Dev</h3>
+                <p>O melhor açaí da cidade.</p>
+            </section>
 
-    <div id="cart-modal" class="cart-modal-container">
+            <section>
+                <h4>Horário</h4>
+                <p>Terça a Domingo<br>14h às 22h</p>
+            </section>
+
+            <section>
+                <h4>Contato</h4>
+                <p>📱 (11) 99999-9999<br>📍 Rua do Açaí, 456</p>
+            </section>
+
+            <section>
+                <h4>Redes</h4>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="copy">
+            <p>© 2026 - Açai do Dev</p>
+        </div>
+    </footer>
+
+    <!-- MODAL CARRINHO -->
+    <div id="cart-modal" class="cart-modal-container hidden">
         <div class="cart-modal">
+
             <div class="cart-header">
                 <h2 class="cart-title">Meu Carrinho</h2>
-                <button id="close-modal-btn"><i class="fa fa-times"></i></button>
+                <button id="close-modal-btn">
+                    <i class="fa fa-times"></i>
+                </button>
             </div>
 
             <div id="cart-items" class="cart-items"></div>
 
-            <p class="cart-total">Total: <span id="cart-total">0.00</span></p>
+            <p class="cart-total">
+                Total: R$ <span id="cart-total">0.00</span>
+            </p>
+
+            <div class="input-group">
+                <label>Seu Nome:</label>
+                <input type="text" id="client-name" placeholder="Como te chamamos?">
+            </div>
 
             <div class="payment-container">
-                <label for="payment-method">Forma de Pagamento (Obrigatório):</label>
-                <select id="payment-method" class="address-input">
-                    <option value="">-- Selecione --</option>
+                <label>Forma de Pagamento:</label>
+                <select id="payment-method">
+                    <option value="">Selecione</option>
                     <option value="dinheiro">Dinheiro</option>
                     <option value="pix">PIX</option>
-                    <option value="debito">Cartão de Débito</option>
-                    <option value="credito">Cartão de Crédito</option>
+                    <option value="debito">Débito</option>
+                    <option value="credito">Crédito</option>
                 </select>
-                <p id="payment-warn" class="address-warn hidden">Selecione a forma de pagamento.</p>
             </div>
 
-            <div id="troco-field" class="troco-container hidden">
-                <label for="troco-value">Precisa de troco para quanto?</label>
-                <input type="number" placeholder="Ex: 50.00" id="troco-value" class="address-input" />
+            <div id="troco-field" class="hidden">
+                <label>Troco para quanto?</label>
+                <input type="number" id="troco-value" placeholder="Ex: 50">
             </div>
 
-            <div class="address-container">
-                <label>Endereço de Entrega (Obrigatório):</label>
-                <input type="text" placeholder="Rua, número e bairro..." id="address" class="address-input" />
-                <p id="address-warn" class="address-warn hidden">Digite seu endereço completo!</p>
+            <label>Endereço de Entrega:</label>
+            <div class="address-grid">
+                <input type="text" id="rua" placeholder="Rua / Avenida">
+                <input type="text" id="numero" placeholder="Nº">
+                <input type="text" id="bairro" class="address-full-width" placeholder="Bairro">
+                <input type="text" id="cidade" class="address-full-width" placeholder="Cidade">
             </div>
 
-            <div class="cart-buttons">
-                <button id="checkout-btn" class="btn checkout-btn">Finalizar Pedido pelo WhatsApp</button>
-            </div>
+            <button id="checkout-btn" class="btn checkout-btn">
+                Finalizar pelo WhatsApp
+            </button>
+
         </div>
     </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- MODAL PRODUTO -->
+    <div id="product-modal" class="cart-modal-container hidden">
+        <div class="cart-modal">
+
+            <div class="cart-header">
+                <h2 id="modal-product-name"></h2>
+                <button id="close-product-modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+
+            <div id="modal-content">
+                <!-- Perguntas dinâmicas via JS -->
+            </div>
+
+            <button id="add-custom-product" class="btn checkout-btn">
+                Adicionar ao Carrinho
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

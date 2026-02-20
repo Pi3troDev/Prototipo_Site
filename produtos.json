@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "name": "Combo Açaí 300ml",
+    "description": "1 copo de 300ml com até 3 acompanhamentos cada",
+    "image": "https://th.bing.com/th/id/R.c71eaa101585cc55c233f50c9c04ab70?rik=F%2fcl4QrJ01G5YQ&pid=ImgRaw&r=0",
+    "badge": "Mais Vendido",
+    "basePrice": 30.00,
+    "groups": [
+      {
+        "title": "Escolha o tipo de Açaí",
+        "required": true,
+        "type": "radio",
+        "max": 1,
+        "options": [
+          { "name": "Tradicional", "price": 0 },
+          { "name": "Nutella", "price": 3 },
+          { "name": "Ninho", "price": 3 },
+          { "name": "Maracujá", "price": 2 },
+          { "name": "Ovomaltine", "price": 3 }
+        ]
+      },
+      {
+        "title": "Escolha até 3 acompanhamentos",
+        "required": false,
+        "type": "counter",
+        "max": 3,
+        "options": [
+          { "name": "Banana", "price": 0 },
+          { "name": "Morango", "price": 0 },
+          { "name": "Granola", "price": 0 },
+          { "name": "Leite Condensado", "price": 0 },
+          { "name": "Leite em pó", "price": 0 },
+          { "name": "Paçoca", "price": 0 },
+          { "name": "Chantilly", "price": 0 }
+        ]
+      },
+      {
+        "title": "Acréscimos Gerais (Pagos)",
+        "type": "counter",
+        "max": 99,
+        "options": [
+          { "name": "Nutella", "price": 4.00 },
+          { "name": "Kit Kat", "price": 4.00 },
+          { "name": "Leite Condensado", "price": 2.00 },
+          { "name": "Morango Extra", "price": 3.00 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Açaí 500ml Personalizado",
+    "description": "Monte seu açaí do seu jeito",
+    "image": "https://alphagel.com.br/wp-content/uploads/2021/05/post_thumbnail-2a4cc713df2edd3ee1171e689b58dae3.jpeg",
+    "badge": "Promoção",
+    "basePrice": 22.90,
+    "groups": [
+      {
+        "title": "Escolha o tipo de Açaí",
+        "required": true,
+        "type": "radio",
+        "max": 1,
+        "options": [
+          { "name": "Tradicional", "price": 0 },
+          { "name": "Nutella", "price": 3 },
+          { "name": "Ninho", "price": 3 },
+          { "name": "Maracujá", "price": 2 }
+        ]
+      },
+      {
+        "title": "Acompanhamentos Grátis (Até 3)",
+        "required": false,
+        "type": "counter",
+        "max": 3,
+        "options": [
+          { "name": "Banana", "price": 0 },
+          { "name": "Morango", "price": 0 },
+          { "name": "Granola", "price": 0 },
+          { "name": "Paçoca", "price": 0 }
+        ]
+      },
+      {
+        "title": "Acréscimos (Pagos)",
+        "type": "counter",
+        "max": 99,
+        "options": [
+          { "name": "Banana", "price": 2.00 },
+          { "name": "Morango", "price": 2.00 },
+          { "name": "Leite Condensado", "price": 2.00 },
+          { "name": "Leite em pó", "price": 2.00 },
+          { "name": "Kit Kat", "price": 4.00 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Açaí Família 1L",
+    "description": "1 litro de açaí com até 5 acompanhamentos",
+    "image": "https://frutagel.com.br/wp-content/uploads/2023/06/MOCKUP-POTE-1L-OVAL-ORIGINAL.png",
+    "badge": "",
+    "basePrice": 39.90,
+    "groups": [
+      {
+        "title": "Escolha até 5 acompanhamentos grátis",
+        "required": false,
+        "type": "counter",
+        "max": 5,
+        "options": [
+          { "name": "Banana", "price": 0 },
+          { "name": "Morango", "price": 0 },
+          { "name": "Granola", "price": 0 },
+          { "name": "Leite Condensado", "price": 0 },
+          { "name": "Leite em pó", "price": 0 }
+        ]
+      },
+      {
+        "title": "Acréscimos (Pagos)",
+        "type": "counter",
+        "max": 99,
+        "options": [
+          { "name": "Nutella", "price": 4.00 },
+          { "name": "Kit Kat", "price": 4.00 },
+          { "name": "M&Ms", "price": 3.00 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sorvete Artesanal",
+    "description": "4 bolas do nosso delicioso sorvete",
+    "image": "https://images.slurrp.com/prodrich_article/i4g2rzvlgb.webp",
+    "badge": "Novidade",
+    "basePrice": 14.90
+  },
+  {
+    "id": 5,
+    "name": "Água Mineral",
+    "description": "Água mineral sem gás",
+    "image": "https://images.tcdn.com.br/img/img_prod/858764/agua_crystal_500ml_c_12_125_1_a26927dc99c2653019b71f1ee44e98be.jpg",
+    "badge": "",
+    "basePrice": 5.90
+  },
+  {
+    "id": 6,
+    "name": "Açaí Tentação",
+    "description": "Açaí com frutas e leite condensado",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.E1xYlpOW7cBOszpr3oIX7wHaHa",
+    "badge": "",
+    "basePrice": 17.90
+  }
+]
