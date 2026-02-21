@@ -620,6 +620,31 @@ footer { background: var(--dark); color: #fff; padding: 60px 0 20px; margin-top:
     to { top: 20px; opacity: 1; }
 }
 
+
+/* MENSAGEM DE SUCESSO (ADICIONADO AO CARRINHO) */
+.toast-success {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2ecc71; /* Verde sucesso */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 10000; /* Fica acima de tudo, até dos modais */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideDownIn 0.4s ease-out;
+}
+
+@keyframes slideDownIn {
+    from { top: -60px; opacity: 0; }
+    to { top: 20px; opacity: 1; }
+}
+
 /* --- RESPONSIVIDADE PARA TELAS PEQUENAS (Mobile) --- */
 @media (max-width: 768px) {
     /* Ajustes Gerais */

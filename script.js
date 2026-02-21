@@ -11,7 +11,7 @@ const trocoField = document.getElementById("troco-field");
 const phone = "5511989985090";
 
 // ==========================
-// FUNÇÃO DE AVISO NA TELA
+// FUNÇÕES DE AVISO NA TELA
 // ==========================
 function mostrarAviso(mensagem) {
     const avisoAntigo = document.querySelector(".toast-error");
@@ -29,6 +29,23 @@ function mostrarAviso(mensagem) {
     }, 3000);
 }
 
+function mostrarSucesso(mensagem) {
+    // Remove avisos anteriores para não acumular
+    const avisoAntigo = document.querySelector(".toast-success");
+    if (avisoAntigo) avisoAntigo.remove();
+
+    const div = document.createElement("div");
+    div.className = "toast-success";
+    div.innerHTML = `<i class="fa fa-check-circle"></i> ${mensagem}`;
+    document.body.appendChild(div);
+
+    // Remove automaticamente após 2 segundos
+    setTimeout(() => {
+        div.style.opacity = "0";
+        div.style.transition = "0.5s";
+        setTimeout(() => div.remove(), 500);
+    }, 2000);
+}
 // ==========================
 // CARREGAR PRODUTOS
 // ==========================
@@ -197,6 +214,8 @@ function addToCart(name, price, description) {
     cart.push({ name, price: Number(price), quantity: 1, description });
   }
   updateCartUI();
+
+  mostrarSucesso("Adicionado ao carrinho!");
 }
 
 function updateCartUI() {
